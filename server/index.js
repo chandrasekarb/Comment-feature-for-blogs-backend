@@ -100,7 +100,7 @@ app.post("/comment", (req, res) => {
 
 
 
-app.get("/replys", (req, res) => {
+app.get("/replies", (req, res) => {
 
   const parent_id = req.query.id;
 
@@ -121,7 +121,7 @@ app.get("/replys", (req, res) => {
 	require('deasync').loopWhile(function(){return !done;});
 
 //  console.log(data);
-  res.send({ replys: data });
+  res.send({ replies: data });
 });
 
 
