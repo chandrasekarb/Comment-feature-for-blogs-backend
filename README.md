@@ -1,6 +1,6 @@
 # Comment-feature-for-blogs-backend
 
-In the project involves building a comments feature for a blog system. Task has to be done with React Js, Node JS and Apache Solr DB.
+In the project involves building a comments feature for a blog system. This project done with React Js, Node Js and Apache Solr DB.
 
 This will looks like the Reddit platform.
 
