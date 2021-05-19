@@ -17,23 +17,6 @@ var clientTest = solr.createClient('localhost', '8983', 'test');
 var clientComment = solr.createClient('localhost', '8983', 'comment');
 var clientReply = solr.createClient('localhost', '8983', 'reply');
 
-function test() { 
-	var done = false;
-	var data = [];
-	var query = clientTest.createQuery().q('*:*').fl('id');
-	clientTest.search(query,function(err,obj){
-		if(err){
-			console.log(err);
-		}else{
-//			console.log(obj);
-			data = obj.response.docs;
-		}
-		done = true;
-	});
-	require('deasync').loopWhile(function(){return !done;});
-	return data;
-}
-
 function commit (solrclient) {
 	var done = false;
 	solrclient.softCommit(function(err,res){
@@ -82,7 +65,6 @@ app.get("/comments", (req, res) => {
 	});
 	require('deasync').loopWhile(function(){return !done;});
 
-//  console.log(data);
   res.send({ comments: data });
 });
 
