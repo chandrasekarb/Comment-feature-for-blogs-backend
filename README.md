@@ -1,5 +1,9 @@
 # Comment-feature-for-blogs-backend
 
+In the project directory, you can run:
+
+### `npm start`
+
 In the project involves building a comments feature for a blog system. This project done with React Js, Node Js and Apache Solr DB.
 
 This will looks like the Reddit platform.
